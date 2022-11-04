@@ -4,14 +4,15 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://pokeapi.co/api/v2'
+  apiUrl: 'https://pokeapi.co/api/v2',
+  firebaseConfig : {
+    apiKey: "AIzaSyCnVbuBZqiZT-QWOadzBXxVSBc5O0GVXXM",
+    authDomain: "pokemon-427c9.firebaseapp.com",
+    projectId: "pokemon-427c9",
+    storageBucket: "pokemon-427c9.appspot.com",
+    messagingSenderId: "223779325056",
+    appId: "1:223779325056:web:4139ab36d9167495d3d265",
+    measurementId: "G-EMRDHH6E4L"
+  },
 };
 
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
