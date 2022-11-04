@@ -1,0 +1,17 @@
+<ng-container *ngIf="pokemonData">
+  <div class="pokemons_grid">
+    <mat-card class="pokemon-card" *ngFor="let x of pokemonData">
+      <div class="pokemon_card_image" appInfiniteScroller (scrollChange)="onScrollPage()">
+        <img [src]="x.sprites.front_shiny" class="pokemon_image" />
+        <div class="pokemon_title">
+          <h2 mat-h2>
+            #{{ x.id }}: {{ x.name }}
+          </h2>
+          <mat-chip-list>
+            <mat-chip *ngFor="let type of x.types" [class]="[type.type.name, 'type']">{{ type.type.name }}</mat-chip>
+          </mat-chip-list>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</ng-container>

@@ -1,0 +1,26 @@
+<ng-container *ngIf="isHandset$ | async as isHandset">
+  <mat-sidenav-container class="container">
+    <mat-sidenav #snav class="sidenav" fixedInViewport autosize
+      [attr.role]="isHandset.matches ? 'dialog' : 'navigation'" [mode]="isHandset.matches ? 'over' : 'side'"
+      [opened]="isHandset.matches === false">
+      <mat-toolbar class="sidenav-toolbar">
+        <picture>
+          <img src="../../../assets/poke.webp" class="header_logo" alt="Pokemon Logo" />
+        </picture>
+      </mat-toolbar>
+      <mat-nav-list class="sidenav-list">
+        <a mat-list-item routerLinkActive="isActive" [routerLink]="'/pokemon'">Pokemon</a>
+        <a mat-list-item target="_blank">About</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar class="sidenav-content">
+        <button mat-icon-button *ngIf="isHandset.matches" (click)="snav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <h1>{{ title }}</h1>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>

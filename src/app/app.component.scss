@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+.sidenav-list> a.isActive {
+  color: #f44336 !important;
+}
+
+.sidenav-toolbar {
+  background-color: #f44336 !important;
+}
+.sidenav-content {
+  background-color: #f44336 !important;
+}
+
+mat-sidenav-content > mat-toolbar > h1 {
+  margin-left: 8px;
+  font-size: 32px;
+  font-weight: 500;
+  background-color: #f44336 !important;
+  color: white;
+}
+.header_logo {
+  height:64px;
+  width:155px;
+}
